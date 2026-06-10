@@ -1,7 +1,7 @@
 const AboutMe = () => {
   return (
     // 1. Cambiamos el <div> principal por <section> y le ponemos el id="about"
-    <section id="about" className="bg-orange-100/30 px-6 md:px-18 py-12 font-body scroll-mt-24">
+    <section id="sobre-mi" className="bg-orange-100/30 px-6 md:px-18 py-12 font-body scroll-mt-24">
 
       <div className="flex items-center justify-start gap-3 mb-6 mt-16">
         <div className="w-8 h-[1.5px] bg-slate-400"></div>

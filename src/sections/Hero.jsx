@@ -12,7 +12,7 @@ const Hero = () => {
           <div className="flex items-center justify-start gap-3 mb-6 mt-2">
             <div className="w-8 h-[1.5px] bg-slate-400"></div>
               <h2 className="font-title text-sm font-semibold uppercase tracking-widest text-slate-500">
-                Nutrióloga Certificada fdfdfd
+                Nutrióloga Certificada
               </h2>
           </div>
           

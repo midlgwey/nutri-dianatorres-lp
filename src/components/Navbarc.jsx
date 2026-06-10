@@ -30,12 +30,12 @@ const Navbarc = () => {
             
             {/* Los href ahora apuntan a los IDs con el símbolo # */}
             <li>
-              <a href="#about" className="block py-2 px-3 text-heading rounded hover:text-[#5A6D3A] transition-colors md:p-0">
+              <a href="#sobre-mi" className="block py-2 px-3 text-heading rounded hover:text-[#5A6D3A] transition-colors md:p-0">
                 Sobre mí
               </a>
             </li>
             <li>
-              <a href="#services" className="block py-2 px-3 text-heading rounded hover:text-[#5A6D3A] transition-colors md:p-0">
+              <a href="#servicios" className="block py-2 px-3 text-heading rounded hover:text-[#5A6D3A] transition-colors md:p-0">
                 Servicios
               </a>
             </li>

@@ -2,7 +2,7 @@ import ServicesCard from '../components/ServicesCard'
 
 const Services = () => {
   return (
-    <section id="services" className="bg-stone-50 px-6 md:px-18 py-12 font-body scroll-mt-24">
+    <section id="servicios" className="bg-stone-50 px-6 md:px-18 py-12 font-body scroll-mt-24">
 
       {/* Eyebrow */}
       <div className="flex items-center justify-center gap-3 mb-6 mt-10">

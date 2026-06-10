@@ -6,7 +6,7 @@ import ContactForm from '../components/ContactForm'
 const Contact = () => {
   return (
     
-    <section id="contact" className="bg-orange-100/40 p-8 md:px-18 py-16 font-body scroll-mt-24" >
+    <section id="contacto" className="bg-orange-100/40 p-8 md:px-18 py-16 font-body scroll-mt-24" >
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:mt-6">
 
