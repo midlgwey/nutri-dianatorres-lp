@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  /* v4 detecta automáticamente el prefijo --font-* y crea la clase font-title */
+  --font-title: "Cormorant Garamond", serif;
+  
+  /* Crea automáticamente la clase font-body */
+  --font-body: "Plus Jakarta Sans", sans-serif;
+
+}
+
+@source "../node_modules/flowbite-react/dist/esm/**/*.js";
+
+html {
+  scroll-behavior: smooth;
+}
