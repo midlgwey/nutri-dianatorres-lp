@@ -46,9 +46,8 @@ const Contact = () => {
             <div className="w-8 flex justify-center text-lime-800 text-2xl">
               <FontAwesomeIcon icon={faEnvelope} />
             </div>
-            <a href="mailto:..." className="text-base font-medium hover:text-taupe-600 transition-colors">
-              nutriologa.dianatorres@gmail.com
-            </a>
+              <p className="text-base font-medium">nutriologa.dianatorres@gmail.com</p>
+            
           </div>
 
           {/* Fila: Teléfono */}
@@ -56,9 +55,7 @@ const Contact = () => {
             <div className="w-8 flex justify-center text-lime-800 text-2xl">
               <FontAwesomeIcon icon={faPhone} />
             </div>
-            <a href="tel:..." className="text-base font-medium hover:text-taupe-600 transition-colors">
-              +52 55 1234 5678
-            </a>
+             <p className="text-base font-medium">  +52 55 1234 5678</p>
           </div>
           </div>
         </div>

@@ -45,7 +45,7 @@ const Hero = () => {
               Agendar Consulta
             </a>
             <a href="#sobre-mi" className="border-2 border-[#745f33] text-[#947738] hover:bg-[#5A6D3A]/5 px-6 py-3.5 rounded-md font-semibold transition-colors duration-300 text-center">
-              Conoce mi enfoque
+              Conoce mi Enfoque
             </a>
           </div>
 

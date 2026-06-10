@@ -19,7 +19,7 @@ export default function Footer() {
         {/* 3. Redes Sociales */}
         <div className="flex justify-center md:justify-end gap-6">
           <a 
-            href="https://www.instagram.com/" 
+            href="https://www.instagram.com/nutri.dianatorres/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="hover:opacity-75 transition-opacity"
@@ -27,7 +27,6 @@ export default function Footer() {
             <FontAwesomeIcon icon={faInstagram} className="text-3xl text-white" />
           </a>
 
-            <FontAwesomeIcon icon={faWhatsapp} className="text-3xl text-white" />
          
         </div>
         
