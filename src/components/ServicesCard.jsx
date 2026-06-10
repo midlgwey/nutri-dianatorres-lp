@@ -1,7 +1,11 @@
+import CareIcon from "../icons/CareIcon";
+import StomachIcon from "../icons/StomachIcon";
+import MedicalIcon from "../icons/MedicalIcon";
+
 const SERVICE_ACCENTS = {
-  0: { icon: "🥗", border: "border-emerald-200", tag: "bg-emerald-50 text-emerald-700" },
-  1: { icon: "🩺", border: "border-emerald-200", tag: "bg-emerald-50 text-emerald-700" },
-  2: { icon: "🌸", border: "border-emerald-200", tag: "bg-emerald-50 text-emerald-700" },
+  0: { icon: <MedicalIcon className="w-10 h-10" />, border: "border-emerald-200", tag: "bg-emerald-50 text-emerald-700" },
+  1: { icon: <StomachIcon className="w-10 h-10" />, border: "border-emerald-200", tag: "bg-emerald-50 text-emerald-700" },
+  2: { icon: <CareIcon className="w-10 h-10" />, border: "border-emerald-200", tag: "bg-emerald-50 text-emerald-700" },
 }
 
 export default function ServicesCard({ title, description, subtitles = [], index = 0 }) {
@@ -17,7 +21,7 @@ export default function ServicesCard({ title, description, subtitles = [], index
     `}>
 
       {/* Ícono */}
-      <div className="text-4xl mb-3">{accent.icon}</div>
+      <div className="text-4xl flex justify-center mb-3">{accent.icon}</div>
 
       {/* Título — altura fija mínima para que alinee entre cards */}
       <h3 className="text-lg font-title font-bold text-slate-700 leading-snug mb-3">

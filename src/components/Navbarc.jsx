@@ -6,7 +6,7 @@ const Navbarc = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-olive-200 fixed w-full z-20 top-0 start-0 border-b border-default">
+    <nav className="bg-olive-200 fixed w-full z-20 top-0 start-0 ">  
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-9 px-4">
         
         {/* Logo */}
@@ -36,7 +36,7 @@ const Navbarc = () => {
         
         {/* Links */}
         <div className={`${isOpen ? 'block' : 'hidden'} w-full md:flex md:items-center md:w-auto`}>
-          <ul className="font-title font-light text-sm uppercase flex flex-col p-4 md:p-0 mt-2 border-t border-default bg-olive-200 md:flex-row md:items-center md:space-x-16 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
+          <ul className="font-title tracking-widest font-light text-sm uppercase flex flex-col p-4 md:p-0 mt-2 border-t border-default bg-olive-200 md:flex-row md:items-center md:space-x-16 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
             <li>
               <a href="#sobre-mi" onClick={() => setIsOpen(false)}
                 className="block py-3 px-3 text-heading rounded hover:text-[#5A6D3A] transition-colors md:p-0">

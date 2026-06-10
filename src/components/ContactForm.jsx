@@ -127,7 +127,7 @@ const ContactForm = () => {
           <div>
             <label className="block text-sm font-bold text-[#5c4a3d] mb-1.5">Número Telefónico</label>
             <input
-              id="telefono" type="tel" placeholder="(000) 000 0000"
+              id="telefono" type="tel" placeholder="(664) 123 4567"
               value={formData.telefono} onChange={handleChange}
               className={inputClass('telefono')}
               maxLength={12}
