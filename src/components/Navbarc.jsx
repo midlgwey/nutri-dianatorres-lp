@@ -4,47 +4,64 @@ const Navbarc = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="border-olive-300 bg-olive-200 fixed w-full z-20 top-0 start-0 border-b border-default">
+    <nav className="bg-olive-200 fixed w-full z-20 top-0 start-0 border-b border-default">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-8 px-4">
         
-        {/* Logo que te regresa hasta arriba */}
+        {/* Logo */}
         <a href="#hero" className="flex items-center space-x-3 rtl:space-x-reverse">
           <span className="self-center text-xl text-heading font-semibold whitespace-nowrap font-title">
             Logo/Nombre
           </span>
         </a>
         
+        {/* Botón hamburguesa / X */}
         <button 
-            onClick={() => setIsOpen(!isOpen)}
-            type="button" 
-            className="inline-flex items-center p-2 w-10 h-10 justify-center rounded-base md:hidden focus:outline-none" 
-          >
+          onClick={() => setIsOpen(!isOpen)}
+          type="button" 
+          className="inline-flex items-center p-2 w-10 h-10 justify-center rounded-base md:hidden focus:outline-none"
+        >
           <span className="sr-only">Abrir menú</span>
-          <svg className="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-            <path stroke="currentColor" strokeLinecap="round" strokeWidth="2" d="M5 7h14M5 12h14M5 17h14"/>
-          </svg>
+          {isOpen ? (
+            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" strokeLinecap="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          ) : (
+            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" strokeLinecap="round" strokeWidth="2" d="M5 7h14M5 12h14M5 17h14"/>
+            </svg>
+          )}
         </button>
         
+        {/* Links */}
         <div className={`${isOpen ? 'block' : 'hidden'} w-full md:block md:w-auto`}>
-          <ul className="font-body font-medium text-sm uppercase flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-16 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
-            
-            {/* Los href ahora apuntan a los IDs con el símbolo # */}
+          <ul className="font-body font-medium text-sm uppercase flex flex-col p-4 md:p-0 mt-2 border-t border-default bg-olive-200 md:flex-row md:space-x-16 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
             <li>
-              <a href="#sobre-mi" className="block py-2 px-3 text-heading rounded hover:text-[#5A6D3A] transition-colors md:p-0">
+              <a 
+                href="#sobre-mi" 
+                onClick={() => setIsOpen(false)}
+                className="block py-3 px-3 text-heading rounded hover:text-[#5A6D3A] transition-colors md:p-0"
+              >
                 Sobre mí
               </a>
             </li>
             <li>
-              <a href="#servicios" className="block py-2 px-3 text-heading rounded hover:text-[#5A6D3A] transition-colors md:p-0">
+              <a 
+                href="#servicios" 
+                onClick={() => setIsOpen(false)}
+                className="block py-3 px-3 text-heading rounded hover:text-[#5A6D3A] transition-colors md:p-0"
+              >
                 Servicios
               </a>
             </li>
             <li>
-              <a href="#contacto" className="block py-2 px-3 text-heading rounded hover:text-[#5A6D3A] transition-colors md:p-0">
+              <a 
+                href="#contacto" 
+                onClick={() => setIsOpen(false)}
+                className="block py-3 px-3 text-heading rounded hover:text-[#5A6D3A] transition-colors md:p-0"
+              >
                 Contacto
               </a>
             </li>
-
           </ul>
         </div>
 
