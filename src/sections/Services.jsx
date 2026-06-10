@@ -20,7 +20,7 @@ const Services = () => {
 
       {/* Subtítulo */}
       <p className="text-center font-body text-slate-700 text-base max-w-md mx-auto mb-10">
-        Nutrición especializada de alta gama y respuestas reales para necesidades específicas: desde el balance hormonal hasta el proceso post-bariátrico.
+       Nutrición clínica especializada en control hormonal y proceso pre y post-bariátrico.
       </p>
 
       {/* Grid — las cards se estiran a la misma altura automáticamente */}
