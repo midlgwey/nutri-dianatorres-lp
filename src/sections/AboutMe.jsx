@@ -10,7 +10,7 @@ const AboutMe = () => {
         </h2>
       </div>
       
-      <h3 className="text-4xl font-title font-semibold mb-2 text-[#5c4a3d]">
+      <h3 className="md:text-4xl font-title font-semibold mb-2 text-[#5c4a3d]">
         Nutrición con <span className="italic font-serif text-[#5c4a3d]/80">propósito</span>
       </h3>
     

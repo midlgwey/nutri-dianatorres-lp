@@ -34,7 +34,7 @@ const Navbarc = () => {
         
         {/* Links */}
         <div className={`${isOpen ? 'block' : 'hidden'} w-full md:block md:w-auto`}>
-          <ul className="font-body font-medium text-sm uppercase flex flex-col p-4 md:p-0 mt-2 border-t border-default bg-olive-200 md:flex-row md:space-x-16 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
+          <ul className="font-title font-light text-sm uppercase flex flex-col p-4 md:p-0 mt-2 border-t border-default bg-olive-200 md:flex-row md:space-x-16 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
             <li>
               <a 
                 href="#sobre-mi" 

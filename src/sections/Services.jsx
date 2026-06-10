@@ -14,12 +14,12 @@ const Services = () => {
       </div>
 
       {/* Título */}
-      <h2 className="text-3xl md:text-4xl font-title font-semibold text-slate-700 text-center mb-3">
+      <h2 className="text-4xl md:text-4xl font-title font-semibold text-slate-700 text-center mb-3">
         Transforma tu salud con el enfoque correcto
       </h2>
 
       {/* Subtítulo */}
-      <p className="text-center text-slate-600 text-sm max-w-md mx-auto mb-10">
+      <p className="text-center font-body text-slate-700 text-base max-w-md mx-auto mb-10">
         Nutrición especializada de alta gama y respuestas reales para necesidades específicas: desde el balance hormonal hasta el proceso post-bariátrico.
       </p>
 
