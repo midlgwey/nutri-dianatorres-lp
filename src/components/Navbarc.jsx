@@ -5,10 +5,10 @@ const Navbarc = () => {
 
   return (
     <nav className="bg-olive-200 fixed w-full z-20 top-0 start-0 border-b border-default">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-8 px-4">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto py-9 px-4">
         
         {/* Logo */}
-        <a href="#hero" className="flex items-center space-x-3 rtl:space-x-reverse">
+        <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
           <span className="self-center text-xl text-heading font-semibold whitespace-nowrap font-title">
             Logo/Nombre
           </span>

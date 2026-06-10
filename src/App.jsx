@@ -4,6 +4,7 @@ import Footer from "./sections/Footer"
 import Services from "./sections/Services"
 import Hero from "./sections/Hero"
 import Navbarc from "./components/Navbarc"
+import Ticker from "./components/Ticker"
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       
       <main>
         <Hero />
+        <Ticker />
         <AboutMe />
         <Services />
         <Contact />
