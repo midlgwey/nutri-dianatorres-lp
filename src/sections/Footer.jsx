@@ -27,14 +27,8 @@ export default function Footer() {
             <FontAwesomeIcon icon={faInstagram} className="text-3xl text-white" />
           </a>
 
-          <a 
-            href="https://wa.me/5216643313275" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="hover:opacity-75 transition-opacity"
-          >
             <FontAwesomeIcon icon={faWhatsapp} className="text-3xl text-white" />
-          </a>
+         
         </div>
         
       </div>

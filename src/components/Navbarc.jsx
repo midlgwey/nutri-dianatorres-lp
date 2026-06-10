@@ -15,10 +15,10 @@ const Navbarc = () => {
         </a>
         
         <button 
-          onClick={() => setIsOpen(!isOpen)}
-          type="button" 
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary" 
-        >
+            onClick={() => setIsOpen(!isOpen)}
+            type="button" 
+            className="inline-flex items-center p-2 w-10 h-10 justify-center rounded-base md:hidden focus:outline-none" 
+          >
           <span className="sr-only">Abrir menú</span>
           <svg className="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
             <path stroke="currentColor" strokeLinecap="round" strokeWidth="2" d="M5 7h14M5 12h14M5 17h14"/>
@@ -26,7 +26,7 @@ const Navbarc = () => {
         </button>
         
         <div className={`${isOpen ? 'block' : 'hidden'} w-full md:block md:w-auto`}>
-          <ul className="font-body font-medium text-sm uppercase flex flex-col p-4 md:p-0 mt-4 border border-default rounded-base bg-neutral-secondary-soft md:flex-row md:space-x-16 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
+          <ul className="font-body font-medium text-sm uppercase flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-16 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
             
             {/* Los href ahora apuntan a los IDs con el símbolo # */}
             <li>
@@ -40,7 +40,7 @@ const Navbarc = () => {
               </a>
             </li>
             <li>
-              <a href="#contact" className="block py-2 px-3 text-heading rounded hover:text-[#5A6D3A] transition-colors md:p-0">
+              <a href="#contacto" className="block py-2 px-3 text-heading rounded hover:text-[#5A6D3A] transition-colors md:p-0">
                 Contacto
               </a>
             </li>
