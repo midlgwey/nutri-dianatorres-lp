@@ -19,7 +19,7 @@ export default function Footer() {
         {/* 3. Redes Sociales */}
         <div className="flex justify-center md:justify-end gap-6">
           <a 
-            href="https://www.instagram.com/nutri.dianatorres/" 
+            href="https://www.instagram.com/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="hover:opacity-75 transition-opacity"

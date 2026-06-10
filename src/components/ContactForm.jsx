@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -10,8 +10,28 @@ const ContactForm = () => {
   });
 
   const [errores, setErrores] = useState({});
+  // Nuevo estado para controlar si el dropdown está abierto o cerrado
+  const [dropdownAbierto, setDropdownAbierto] = useState(false);
+  const dropdownRef = useRef(null);
 
-  // Formatea el teléfono con máscara: 664 331 3275
+  // Lista de tus servicios
+  const opcionesServicios = [
+    "Consulta Nutricional",
+    "Especialidad Bariátrica",
+    "Salud Hormonal"
+  ];
+
+  // Cerrar el dropdown automáticamente si el usuario hace clic afuera de él
+  useEffect(() => {
+    const clickAfuera = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setDropdownAbierto(false);
+      }
+    };
+    document.addEventListener('mousedown', clickAfuera);
+    return () => document.removeEventListener('mousedown', clickAfuera);
+  }, []);
+
   const formatearTelefono = (valor) => {
     const soloDigitos = valor.replace(/\D/g, '').slice(0, 10);
     if (soloDigitos.length <= 3) return soloDigitos;
@@ -19,7 +39,6 @@ const ContactForm = () => {
     return `${soloDigitos.slice(0, 3)} ${soloDigitos.slice(3, 6)} ${soloDigitos.slice(6)}`;
   };
 
-  // Solo permite letras y espacios en el nombre
   const formatearNombre = (valor) => {
     return valor.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑüÜ\s]/g, '');
   };
@@ -33,6 +52,12 @@ const ContactForm = () => {
 
     setFormData(prev => ({ ...prev, [id]: valorFinal }));
     if (errores[id]) setErrores(prev => ({ ...prev, [id]: '' }));
+  };
+
+  // Función especial para actualizar el servicio simulando el evento original
+  const seleccionarServicio = (servicio) => {
+    handleChange({ target: { id: 'servicio', value: servicio } });
+    setDropdownAbierto(false);
   };
 
   const validar = () => {
@@ -81,7 +106,7 @@ const ContactForm = () => {
   };
 
   const inputClass = (campo) =>
-    `w-full bg-[#f8fbf8] border rounded-md px-4 py-2.5 outline-none focus:ring-2 focus:ring-[#5A6D3A]/50 ${
+    `w-full bg-[#f8fbf8] border rounded-md px-4 py-2.5 outline-none focus:ring-2 focus:ring-[#5A6D3A]/50 transition-all flex items-center justify-between text-left ${
       errores[campo] ? 'border-red-400' : 'border-[#d0dfd0]'
     }`;
 
@@ -93,7 +118,7 @@ const ContactForm = () => {
           <div>
             <label className="block text-sm font-bold text-[#5c4a3d] mb-1.5">Nombre Completo</label>
             <input
-              id="nombre" type="text" placeholder="Tu nombre  y apellido"
+              id="nombre" type="text" placeholder="Tu nombre y apellido"
               value={formData.nombre} onChange={handleChange}
               className={inputClass('nombre')}
             />
@@ -121,34 +146,60 @@ const ContactForm = () => {
           {errores.correo && <p className="text-red-500 text-xs mt-1">{errores.correo}</p>}
         </div>
 
-        <div>
+        {/* CONTENEDOR DEL NUEVO DROPDOWN PERSONALIZADO */}
+        <div className="relative" ref={dropdownRef}>
           <label className="block text-sm font-bold text-[#5c4a3d] mb-1.5">Servicio de Interés</label>
-          <select
-            id="servicio"
-            value={formData.servicio} onChange={handleChange}
-            className={inputClass('servicio')}
+          
+          {/* Botón que simula el input */}
+          <button
+            type="button"
+            onClick={() => setDropdownAbierto(!dropdownAbierto)}
+            className={`${inputClass('servicio')} text-gray-700`}
           >
-            <option value="">Selecciona una opción</option>
-            <option value="Consulta Nutricional">Consulta Nutricional</option>
-            <option value="Especialidad Bariatrica">Especialidad Bariátrica</option>
-            <option value="Salud Hormonal">Salud Hormonal</option>
-          </select>
+            <span className={formData.servicio ? 'text-gray-900' : 'text-gray-400'}>
+              {formData.servicio || "Selecciona una opción"}
+            </span>
+            {/* Icono de flecha animada */}
+            <svg 
+              className={`w-4 h-4 text-[#5c4a3d] transition-transform duration-200 ${dropdownAbierto ? 'rotate-180' : ''}`} 
+              fill="none" stroke="currentColor" viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+
+          {/* Menú desplegable flotante (No bloquea la pantalla) */}
+          {dropdownAbierto && (
+            <div className="absolute z-50 w-full mt-1 bg-white border border-[#d0dfd0] rounded-md shadow-lg overflow-hidden animate-fadeIn">
+              {opcionesServicios.map((servicio, index) => (
+                <button
+                  key={index}
+                  type="button"
+                  onClick={() => seleccionarServicio(servicio)}
+                  className="w-full text-left px-4 py-3 text-sm text-[#5c4a3d] hover:bg-[#f8fbf8] hover:text-[#5A6D3A] font-medium transition-colors border-b border-gray-50 last:border-none"
+                >
+                  {servicio}
+                </button>
+              ))}
+            </div>
+          )}
           {errores.servicio && <p className="text-red-500 text-xs mt-1">{errores.servicio}</p>}
         </div>
 
         <div>
           <label className="block text-sm font-bold text-[#5c4a3d] mb-1.5">Cuéntame sobre ti</label>
           <textarea
-            id="mensaje" rows="4" placeholder="¿Cual es tu objetivo? ¿Tienes alguna condición de salud que deba conocer?"
+            id="mensaje" rows="4" placeholder="¿Cuál es tu objetivo? ¿Tienes alguna condición de salud que deba conocer?"
             value={formData.mensaje} onChange={handleChange}
-            className="w-full bg-[#f8fbf8] border border-[#d0dfd0] rounded-md px-4 py-2.5 outline-none focus:ring-2 focus:ring-[#5A6D3A]/50 resize-none"
+            className="w-full bg-[#f8fbf8] border border-[#d0dfd0] rounded-md px-4 py-2.5 outline-none focus:ring-2 focus:ring-[#5A6D3A]/50 resize-none text-gray-900"
           ></textarea>
         </div>
 
         <button
           type="submit"
-          className="bg-[#5A6D3A] hover:bg-[#48572e] font-body text-white font-semibold py-3.5 rounded-md uppercase tracking-wide transition-colors"
-        >Enviar Mensaje
+          className="bg-[#5A6D3A] hover:bg-[#48572e] font-body text-white font-semibold py-3.5 rounded-md uppercase tracking-wide transition-colors shadow-sm"
+        >
+          Enviar Mensaje
         </button>
 
       </form>
