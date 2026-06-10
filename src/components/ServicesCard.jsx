@@ -17,10 +17,10 @@ export default function ServicesCard({ title, description, subtitles = [], index
     `}>
 
       {/* Ícono */}
-      <div className="text-3xl mb-3">{accent.icon}</div>
+      <div className="text-4xl mb-3">{accent.icon}</div>
 
       {/* Título — altura fija mínima para que alinee entre cards */}
-      <h3 className="text-base font-title font-bold text-slate-700 leading-snug mb-3">
+      <h3 className="text-lg font-title font-bold text-slate-700 leading-snug mb-3">
         {title}
       </h3>
 

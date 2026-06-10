@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import { useState } from 'react';
 
 const Navbarc = () => {
@@ -13,8 +15,8 @@ const Navbarc = () => {
             Logo/Nombre
           </span>
         </a>
-        
-        {/* Botón hamburguesa / X */}
+
+        {/* Solo hamburguesa en móvil */}
         <button 
           onClick={() => setIsOpen(!isOpen)}
           type="button" 
@@ -33,33 +35,36 @@ const Navbarc = () => {
         </button>
         
         {/* Links */}
-        <div className={`${isOpen ? 'block' : 'hidden'} w-full md:block md:w-auto`}>
-          <ul className="font-title font-light text-sm uppercase flex flex-col p-4 md:p-0 mt-2 border-t border-default bg-olive-200 md:flex-row md:space-x-16 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
+        <div className={`${isOpen ? 'block' : 'hidden'} w-full md:flex md:items-center md:w-auto`}>
+          <ul className="font-title font-light text-sm uppercase flex flex-col p-4 md:p-0 mt-2 border-t border-default bg-olive-200 md:flex-row md:items-center md:space-x-16 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-neutral-primary">
             <li>
-              <a 
-                href="#sobre-mi" 
-                onClick={() => setIsOpen(false)}
-                className="block py-3 px-3 text-heading rounded hover:text-[#5A6D3A] transition-colors md:p-0"
-              >
+              <a href="#sobre-mi" onClick={() => setIsOpen(false)}
+                className="block py-3 px-3 text-heading rounded hover:text-[#5A6D3A] transition-colors md:p-0">
                 Sobre mí
               </a>
             </li>
             <li>
-              <a 
-                href="#servicios" 
-                onClick={() => setIsOpen(false)}
-                className="block py-3 px-3 text-heading rounded hover:text-[#5A6D3A] transition-colors md:p-0"
-              >
+              <a href="#servicios" onClick={() => setIsOpen(false)}
+                className="block py-3 px-3 text-heading rounded hover:text-[#5A6D3A] transition-colors md:p-0">
                 Servicios
               </a>
             </li>
             <li>
-              <a 
-                href="#contacto" 
-                onClick={() => setIsOpen(false)}
-                className="block py-3 px-3 text-heading rounded hover:text-[#5A6D3A] transition-colors md:p-0"
-              >
+              <a href="#contacto" onClick={() => setIsOpen(false)}
+                className="block py-3 px-3 text-heading rounded hover:text-[#5A6D3A] transition-colors md:p-0">
                 Contacto
+              </a>
+            </li>
+
+            {/* Instagram: dentro del menú en móvil, al final en desktop */}
+            <li>
+              <a 
+                href="https://www.instagram.com/nutri.dianatorres/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="block py-3 px-3 md:p-0 hover:opacity-75 transition-opacity"
+              >
+                <FontAwesomeIcon icon={faInstagram} className="text-2xl" />
               </a>
             </li>
           </ul>
