@@ -13,7 +13,7 @@ const Contact = () => {
         <div className="flex flex-col">
           <div className="flex items-center justify-start gap-3 mb-8 mt-3">
             <div className="w-8 h-[1.5px] bg-slate-400"></div>
-            <h2 className="font-title text-sm font-semibold uppercase tracking-widest text-taupe-600">
+            <h2 className="font-title text-sm font-semibold uppercase tracking-widest text-slate-500">
               Contacto
             </h2>
           </div>

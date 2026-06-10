@@ -1,7 +1,7 @@
 const SERVICE_ACCENTS = {
   0: { icon: "🥗", border: "border-emerald-200", tag: "bg-emerald-50 text-emerald-700" },
-  1: { icon: "🩺", border: "border-blue-200", tag: "bg-blue-50 text-blue-700" },
-  2: { icon: "🌸", border: "border-rose-200", tag: "bg-rose-50 text-rose-700" },
+  1: { icon: "🩺", border: "border-emerald-200", tag: "bg-emerald-50 text-emerald-700" },
+  2: { icon: "🌸", border: "border-emerald-200", tag: "bg-emerald-50 text-emerald-700" },
 }
 
 export default function ServicesCard({ title, description, subtitles = [], index = 0 }) {

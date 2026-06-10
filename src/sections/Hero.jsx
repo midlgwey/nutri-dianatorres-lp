@@ -27,7 +27,7 @@ const Hero = () => {
 
           <div className="flex items-center justify-start gap-3 mb-6 mt-2">
             <div className="w-8 h-[1.5px] bg-slate-400"></div>
-            <h2 className="font-title text-sm font-semibold uppercase tracking-widest text-slate-500">
+            <h2 className="font-title text-sm font-semibold uppercase tracking-widest text-slate-600">
               Nutrióloga Certificada
             </h2>
           </div>
@@ -41,7 +41,7 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-row flex-wrap gap-4 font-body">
-            <a href="#contacto" className="bg-[#5A6D3A] hover:bg-[#48572e] text-white px-6 py-3.5 rounded-md font-semibold transition-colors duration-300 text-center shadow-sm">
+            <a href="#contacto" className="bg-[#7b8d5c] hover:bg-[#697a4b] text-white px-6 py-3.5 rounded-md font-semibold transition-colors duration-300 text-center shadow-sm">
               Agendar Consulta
             </a>
             <a href="#sobre-mi" className="border-2 border-[#745f33] text-[#947738] hover:bg-[#5A6D3A]/5 px-6 py-3.5 rounded-md font-semibold transition-colors duration-300 text-center">
