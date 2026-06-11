@@ -61,7 +61,9 @@ const Contact = () => {
         </div>
     
         {/* Lado derecho: Formulario */}
-        <ContactForm />
+        <div className="flex items-start justify-center">
+          <ContactForm />
+        </div>
 
       </div>
     </section>

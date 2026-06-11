@@ -111,8 +111,8 @@ const ContactForm = () => {
     }`;
 
   return (
-    <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 font-body w-full">
-      <form onSubmit={handleSubmit} className="flex flex-col gap-5" noValidate>
+    <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 font-body w-full max-w-xl">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-2" noValidate>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div>
@@ -197,9 +197,9 @@ const ContactForm = () => {
 
         <button
           type="submit"
-          className="bg-[#7b8d5c] hover:bg-[#697a4b] font-body text-white font-semibold py-3.5 rounded-md uppercase tracking-wide transition-colors shadow-sm"
+          className="bg-[#7b8d5c] hover:bg-[#697a4b] text-sm font-body text-white font-semibold py-3.5 rounded-md uppercase tracking-wide transition-colors shadow-sm"
         >
-          Enviar Mensaje
+          Enviar por WhatsApp
         </button>
 
       </form>
