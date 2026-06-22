@@ -17,7 +17,7 @@ const Contact = () => {
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
             viewport={{ once: true, margin: "-50px" }}
             className="flex items-center justify-start gap-3 mb-8 mt-3"
           >
@@ -31,7 +31,7 @@ const Contact = () => {
           <motion.h3 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true, margin: "-50px" }}
             className="text-4xl font-title font-semibold mb-4 text-taupe-600"
           >
@@ -42,7 +42,7 @@ const Contact = () => {
           <motion.p 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
             viewport={{ once: true, margin: "-50px" }}
             className="text-lg text-gray-600 text-left mt-8 mb-10 leading-loose"
           >
@@ -55,7 +55,7 @@ const Contact = () => {
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+            transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
             viewport={{ once: true, margin: "-50px" }}
             className="flex flex-col gap-5"
           >
@@ -91,7 +91,7 @@ const Contact = () => {
         <motion.div 
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
           viewport={{ once: true, margin: "-50px" }}
           className="flex items-start justify-center"
         >
