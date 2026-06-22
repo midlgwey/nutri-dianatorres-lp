@@ -3,13 +3,13 @@ import { motion } from 'framer-motion';
 
 const AboutMe = () => {
   return (
-    // 1. Cambiamos el <div> principal por <section> y le ponemos el id="about"
+    // Sección "Sobre mí" con animaciones suaves y diseño limpio
     <section id="sobre-mi" className="bg-orange-100/30 px-6 md:px-18 py-12 font-body scroll-mt-24">
 
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
         viewport={{ once: true, margin: "-50px" }}
         className="flex items-center justify-start gap-3 mb-6 mt-16"
       >
@@ -22,7 +22,7 @@ const AboutMe = () => {
       <motion.h3 
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+        transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
         viewport={{ once: true, margin: "-50px" }}
         className="text-4xl font-title font-semibold mb-2 text-taupe-600"
       >
@@ -32,7 +32,7 @@ const AboutMe = () => {
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+        transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
         viewport={{ once: true, margin: "-50px" }}
         className="max-w-4xl"
       >
@@ -54,7 +54,7 @@ const AboutMe = () => {
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.6 }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.6 }}
           viewport={{ once: true, margin: "-50px" }}
           className="border-l-2 border-[#5A6D3A] pl-4"
         >
@@ -65,7 +65,7 @@ const AboutMe = () => {
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.7 }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.7 }}
           viewport={{ once: true, margin: "-50px" }}
           className="border-l-2 border-[#5A6D3A] pl-4"
         >
@@ -76,7 +76,7 @@ const AboutMe = () => {
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.8 }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.8 }}
           viewport={{ once: true, margin: "-50px" }}
           className="border-l-2 border-[#5A6D3A] pl-4"
         >
@@ -87,7 +87,7 @@ const AboutMe = () => {
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.9 }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.9 }}
           viewport={{ once: true, margin: "-50px" }}
           className="border-l-2 border-[#5A6D3A] pl-4"
         >
